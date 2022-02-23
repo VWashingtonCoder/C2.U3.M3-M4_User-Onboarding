@@ -36,6 +36,7 @@ export default function Form(props) {
             </div>
             <div className="form-group inputs">
                 <h4>General Profile Information</h4>
+                {/* text */}
                 <label>Name
                     <input 
                         value = {values.name}
@@ -68,7 +69,7 @@ export default function Form(props) {
                             type = "text"
                        />
                 </label>
-                {/* Option Select */}
+                {/* DropDown */}
                 <label>Fav Genre
                     <select
                         onChange = {onChange}
