@@ -4,36 +4,17 @@ import Form from './components/Form';
 import React, { useState, useEffect } from 'react';
 import * as yup from "yup";
 import axios from "axios";
-
-//Initial States
-const initialFormValues = {
-  /* Text */
-  name: "",
-  username: "",
-  email: "",
-  password: "",
-  /* DropDown */
-  genre: "",
-  /* Radio */
-  choice: "",
-  /* Checkbox */
-  tos: false,
-} 
-
-const initialFormErrors = {
-   name: "",
-   username: "",
-   email: "",
-   password: "",
-   genre: "",
-   choice: "",
-}
-
-const initialGamers = []
-const initialDisabled = true
+import { initialFormValues, initialFormErrors, initialGamers, initialDisabled } from "./components/Initials"
 
 function App() {
-  
+  /* States */
+  const [users, setUsers] = useState(initialGamers);
+  const [formValues, setFormValues] = useState(initialFormValues);
+  const [formErrors, setFormErrors] = useState(initialFormErrors);
+  const [disabled, setDisabled] = useState(initialDisabled);
+
+  /* Helper Functions */
+
   
   
   
