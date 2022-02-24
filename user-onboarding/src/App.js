@@ -19,9 +19,11 @@ function App() {
   const postNewUser = newUser => {
     axios.post("https://reqres.in/api/users", newUser)
       .then(res => {
-        console.log(res)
+        // console.log(res)
+        setUsers([...users, res.data]);
+        setFormValues(initialFormValues);
       })
-      .catch(err => console.error(err))
+      .catch(err => console.error(err));
   }
   // Validation
   const validate = (name, value)  => {

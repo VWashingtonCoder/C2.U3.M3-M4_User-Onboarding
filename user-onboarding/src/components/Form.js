@@ -90,27 +90,27 @@ export default function Form(props) {
                     <input 
                         type = "radio"
                         name = "choice"
-                        value = "console"
+                        value = "Console"
                         onChange = {onChange}
-                        checked = {values.choice === "console"}
+                        checked = {values.choice === "Console"}
                     />
                 </label>
                 <label>PC
                     <input
                         type = "radio"
                         name = "choice"
-                        value = "pc"
+                        value = "PC"
                         onChange = {onChange}
-                        checked = {values.choice === "pc"}
+                        checked = {values.choice === "PC"}
                     />
                 </label>
                 <label>Neither/Both (No Interest in The War...)
                     <input
                         type = "radio"
                         name = "choice"
-                        value = "noInterest"
+                        value = "NoInterest"
                         onChange = {onChange}
-                        checked = {values.choice === "noInterest"}
+                        checked = {values.choice === "NoInterest"}
                     />
                 </label>
                 {/* Checkbox */}

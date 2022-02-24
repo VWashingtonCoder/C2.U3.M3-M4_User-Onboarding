@@ -7,7 +7,7 @@ function User({ profile }) {
 
     return (
         <div className="user container">
-            <h2>{profile.username}</h2>
+            <h2>Welcome {profile.username}</h2>
             <p>Name: {profile.name}</p>
             <p>Email: {profile.email}</p>
             <p>Password Protected</p>
