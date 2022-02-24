@@ -28,7 +28,7 @@ const formSchema = yup.object().shape({
         .string()
         .required()
         .oneOf([ "console", "pc", "noInterest"],"Pick your allegiance: Console vs. PC"),
-    tos: yup.boolean()
+    tos: yup.boolean().required("You Must Agree To Advance")
 })
 
 export default formSchema;

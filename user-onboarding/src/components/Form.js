@@ -81,7 +81,7 @@ export default function Form(props) {
                         <option value="adventure">Adventure</option>
                         <option value="roleplay">Role-Playing</option>
                         <option value="simulation">Simulation</option>
-                        <option value="strategy"></option>
+                        <option value="strategy">Strategy</option>
                         <option value="multiplayer">Multiplayer</option>
                     </select>
                 </label>
