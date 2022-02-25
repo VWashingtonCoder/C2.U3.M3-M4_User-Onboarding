@@ -36,92 +36,99 @@ export default function Form(props) {
             </div>
             <div className="form-group inputs">
                 <h4>General Profile Information</h4>
-                {/* text */}
-                <label>Name
-                    <input 
-                        value = {values.name}
-                        onChange = {onChange}
-                        name = "name"
-                        type = "text"
-                    />
-                </label>
-                <label>Username
-                    <input 
-                        value = {values.username}
-                        onChange = {onChange}
-                        name = "username"
-                        type = "text"
-                    />
-                </label>
-                <label>Email
-                    <input 
-                        value = {values.email}
-                        onChange = {onChange}
-                        name = "email"
-                        type = "text" 
-                    />
-                </label>
-                <label>Password
-                       <input  
+                <div id="textinput">
+                    <label>Name
+                        <input 
+                            value = {values.name}
+                            onChange = {onChange}
+                            name = "name"
+                            type = "text"
+                        />
+                    </label>
+                    <label>Username
+                        <input 
+                            value = {values.username}
+                            onChange = {onChange}
+                            name = "username"
+                            type = "text"
+                        />
+                    </label>
+                    <label>Email
+                        <input 
+                            value = {values.email}
+                            onChange = {onChange}
+                            name = "email"
+                            type = "text" 
+                        />
+                    </label>
+                    <label>Password
+                        <input  
                             value = {values.password}
                             onChange = {onChange}
                             name = "password"
                             type = "text"
                        />
-                </label>
-                {/* DropDown */}
-                <label>Fav Genre
-                    <select
-                        onChange = {onChange}
-                        value = {values.genre}
-                        name = "genre"
-                    >
-                        <option value="">---Default---</option>
-                        <option value="action">Action</option>
-                        <option value="adventure">Adventure</option>
-                        <option value="roleplay">Role-Playing</option>
-                        <option value="simulation">Simulation</option>
-                        <option value="strategy">Strategy</option>
-                        <option value="multiplayer">Multiplayer</option>
-                    </select>
-                </label>
-                {/* Radio BTNs */}
-                <label>Console (PS, Xbox, Nintendo, etc)
-                    <input 
-                        type = "radio"
-                        name = "choice"
-                        value = "Console"
-                        onChange = {onChange}
-                        checked = {values.choice === "Console"}
-                    />
-                </label>
-                <label>PC
-                    <input
-                        type = "radio"
-                        name = "choice"
-                        value = "PC"
-                        onChange = {onChange}
-                        checked = {values.choice === "PC"}
-                    />
-                </label>
-                <label>Neither/Both (No Interest in The War...)
-                    <input
+                    </label>
+                </div>>
+                
+                <div id="selectinput">
+                    <label>Fav Genre
+                        <select
+                            onChange = {onChange}
+                            value = {values.genre}
+                            name = "genre"
+                        >
+                            <option value="">---Default---</option>
+                            <option value="action">Action</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="roleplay">Role-Playing</option>
+                            <option value="simulation">Simulation</option>
+                            <option value="strategy">Strategy</option>
+                            <option value="multiplayer">Multiplayer</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div id="radioBtns">
+                    <label>Console (PS, Xbox, Nintendo, etc)
+                        <input 
+                            type = "radio"
+                            name = "choice"
+                            value = "Console"
+                            onChange = {onChange}
+                            checked = {values.choice === "Console"}
+                        />
+                    </label>
+                    <label>PC
+                        <input
+                            type = "radio"
+                            name = "choice"
+                            value = "PC"
+                            onChange = {onChange}
+                            checked = {values.choice === "PC"}
+                        />
+                    </label>
+                    <label>Neither/Both (No Interest in The War...)
+                      <input
                         type = "radio"
                         name = "choice"
                         value = "NoInterest"
                         onChange = {onChange}
                         checked = {values.choice === "NoInterest"}
-                    />
-                </label>
+                        />
+                    </label>
+                </div>
                 {/* Checkbox */}
-                <label>Terms Of Service
-                    <input
-                        type = "checkbox"
-                        name = "tos"
-                        checked = {values.tos}
-                        onChange = {onChange}
-                    />
-                </label>
+                <div id="checkbox">
+                    <label>Terms Of Service
+                        <input
+                            type = "checkbox"
+                            name = "tos"
+                            checked = {values.tos}
+                            onChange = {onChange}
+                        />
+                    </label>
+                </div>
             </div>
             <div className="form-group submit">
                 <button disabled = {disabled}>Submit</button>
