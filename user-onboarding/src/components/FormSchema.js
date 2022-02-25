@@ -21,14 +21,12 @@ const formSchema = yup.object().shape({
         .required("Keep your gaming protected! Password needed")
         .min(3, "Let's Add More Than 3 Chars"),
     genre: yup
-        .string()
-        .required()
-        .oneOf([ "action", "adventure", "roleplay", "simulation", "strategy", "multiplayer"],"Necessary Profile Info"),
+        .string(),
     choice: yup
-        .string()
-        .required()
-        .oneOf([ "console", "pc", "noInterest"],"Pick your allegiance: Console vs. PC"),
-    tos: yup.boolean().required("You Must Agree To Advance")
+        .string(),
+    tos: yup
+        .boolean()
+        .oneOf([true], "You Must Agree To Advance")
 })
 
 export default formSchema;
